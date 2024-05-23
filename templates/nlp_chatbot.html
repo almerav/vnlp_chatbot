@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/nlp_chatbot.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <div class="logo">MealMaven</div>
+        </div>
+    </nav>
+
+    <div class="chat-container">
+        <div class="chat-area">
+            <img src="{{ url_for('static', filename='img/gradient.png') }}" class="chat-logo">
+            <p class="welcome-message"><b>What's in your kitchen? Let's find a recipe!</b></p>
+            <div class="chat-messages" id="chat-box"></div>
+            <button id="get-started-btn">Let's get started</button>
+            <div class="button-options" id="button-options" style="display: none;"></div>
+            <div class="message-box" id="message-box" style="display: none;">
+                <input type="text" id="user-input" placeholder="Enter your ingredients here...">
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="module" src="{{ url_for('static', filename='js/nlp_chatbot.js') }}"></script>
+</body>
+</html>
